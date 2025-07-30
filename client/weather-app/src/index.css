@@ -1,68 +1,148 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
   min-height: 100vh;
+  background: linear-gradient(to bottom, #263159 0%, #1b1b2f 100%);
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.header h1 {
+  font-size: 32px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.search-bar input {
+  height: 40px;
+  width: 250px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background: #1e1e1e;
+  color: white;
+}
+
+.search-bar button {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background: #7b5bf3;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.search-bar button:hover {
+  background: #6a4ee0;
+}
+
+.weather-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.weather-card {
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.weather-card h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.weather-card span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.weather-card h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.weather-card p {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.temps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ddd;
+}
+
+footer {
+  margin-top: 60px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Color Themes */
+.weather-card.blue {
+  background: #3a7bd5;
+  background: linear-gradient(to top right, #3a7bd5, #00d2ff);
+}
+
+.weather-card.purple {
+  background: #7f53ac;
+  background: linear-gradient(to top right, #7f53ac, #647dee);
+}
+
+.weather-card.green {
+  background: #11998e;
+  background: linear-gradient(to top right, #11998e, #38ef7d);
+}
+
+.weather-card.orange {
+  background: #f7971e;
+  background: linear-gradient(to top right, #f7971e, #ffd200);
+}
+
+.weather-card.red {
+  background: #cb2d3e;
+  background: linear-gradient(to top right, #cb2d3e, #ef473a);
 }
