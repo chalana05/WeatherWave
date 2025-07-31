@@ -1,4 +1,4 @@
-# 🌤️ Weather App
+# 🌤️ WeatherWave
 
 A responsive React weather application that displays current weather information for multiple cities.
 
