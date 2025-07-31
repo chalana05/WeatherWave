@@ -1,6 +1,6 @@
 # 🌤️ WeatherWave
 
-A responsive React weather application that displays current weather information for multiple cities.
+A modern, responsive weather application built with React that displays current weather information for multiple cities with a beautiful UI and smooth animations.
 
 ## Features
 
